@@ -1,0 +1,6 @@
+@mixin flex-conf($justifyContent: space-between, $alignItems: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: row;
+}
