@@ -1,0 +1,91 @@
+.services {
+    margin: 50px auto;
+    width: 80%;
+    flex-wrap: wrap;
+    @include flex-conf(space-between, center);
+    &__num {
+        position: absolute;
+        left: 20px;
+        top: -10px;
+        font-size: 100px;
+        font-weight: 600;
+        color: #fdefe9;
+        z-index: 1;
+    }
+    &__card {
+        position: relative;
+        width: 350px;
+        height: 420px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        @include flex-conf(flex-start);
+        flex-direction: column;
+        padding: 40px;
+    }
+    &__image {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 20px;
+        color: #1e1e1e;
+        font-size: 22px;
+    }
+    &__desc {
+        margin-bottom: 30px;
+        color: #888;
+        font-size: 15px;
+        line-height: 30px;
+        text-align: center;
+        transition: 0.5s linear background 0.5s linear color;
+        &::selection {
+            background: $bg-pink;
+            color: #fff;
+        }
+    }
+    &__link {
+        background-color: $bg-orange;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 15px 25px;
+        border-radius: 50px;
+        word-spacing: 1px;
+        transition: 0.5s ease background-color;
+        &:hover {
+            background-color: $bg-pink;
+        }
+    }
+}
+
+@media (min-width: 300px) {
+    .services {
+        width: 90%;
+        &__card {
+            margin: 20px 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .services {
+        width: 580px;
+    }
+}
+
+@media(min-width:800px) {
+    .services {
+        width: 750px;
+        &__card {
+            width: 350px;
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    .services {
+        width: 1100px;
+    }
+}

@@ -1,0 +1,58 @@
+.sliding {
+    margin-top: -300px;
+    padding-top: 400px;
+    background: url('../images/right-bg-decor.png') no-repeat right center;
+    &__title {
+        font-size: 42px;
+        color: #1e1e1e;
+        &--orange {
+            color: $bg-orange;
+        }
+    }
+    &__desc {
+        font-size: 15px;
+        color: #888;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+    &__content {
+        width: 90%;
+        margin: auto;
+    }
+    &__header {
+        text-align: center;
+    }
+    &__stars {
+        i {
+            font-size: 13px;
+        }
+    }
+    &__card {
+        &-user {
+            position: absolute;
+            top: -40px;
+            left: -30px;
+        }
+        &-title {
+            font-size: 22px;
+        }
+        &-desc {
+            font-weight: 300;
+            line-height: 25px;
+            font-size: 15px;
+        }
+        &-container {
+            position: relative;
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+            height: 400px;
+            width: 300px;
+            margin: 100px 0 100px auto;
+            border-radius: 5px;
+            background: linear-gradient(145deg, rgba(244, 129, 63, 1) 0%, rgba(241, 85, 106, 1) 100%);
+            @include flex-conf(space-between);
+            flex-direction: column;
+        }
+    }
+}
