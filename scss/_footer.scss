@@ -1,0 +1,180 @@
+.footer {
+  height: 100%;
+  width: 100%;
+  background: url('../images/footer-bg.png')no-repeat center center/cover;
+  @include flex-conf(center, center);
+
+  &__container {
+    width: 80%;
+    padding-top: 100px;
+    margin: 0 auto;
+  }
+  
+  &__form {
+    @include flex-conf(center, center);
+    flex-wrap: wrap;
+    width: 540px;
+    padding: 30px 0;
+    border: 1px solid #eee;
+    background: #fff;
+  }
+  &__input-group {
+    @include flex-conf();
+    width: 90%;
+  }  
+  &__input {
+    margin: 10px 0;
+    width: 48%;
+    height: 40px;
+    font:13px 'Poppins';
+    border: 1px solid #eee;
+    padding: 0 10px;
+    border-radius: 3px;
+    background-color: rgba(250,250,250,0.3);
+  }
+  
+  &__textarea {
+    background-color: rgba(250,250,250,0.3);
+    margin: 10px 0;
+    font: 13px 'Poppins';
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 10px;
+    width: 90%;
+  }
+  
+  &__btn {
+    font: 600 16px 'Poppins';    
+    margin: 10px 0;
+    padding: 15px 25px;
+    background: $bg-orange;
+    color: #fff;
+    border-radius: 50px;
+  }
+  &__content { 
+    @include flex-conf();
+  }
+  &__body {
+    width: 45%;
+    color: #fff;
+  }
+  &__desc{
+    font-size:15px;
+    font-weight: 300;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+  &__title {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+    &--border {
+      border-bottom: 5px solid #fff;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  &__item {
+    border: 1px solid #fff;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+    @include flex-conf(center, center);
+    transition: .6s all;
+    cursor: pointer;
+    
+    &:hover {
+      background: #fff;
+      color: $bg-pink;
+    }
+  }
+  
+  &__end {
+    margin-top: 70px;
+    border-top: 1px solid rgba(250,250,250,0.3);
+    height: 100px;
+    width: 100%;
+    @include flex-conf(center, center);
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
+  
+  &__link {
+    font-size: 17px;
+  }
+}
+
+@media(max-width:1300px) {
+  .footer {
+    margin-top: 25px;
+    &__container {
+      padding: unset;
+      width: 92%;
+    }
+    &__input-group {
+      flex-direction: column;
+    }
+    &__input {
+      width: 100%;
+    }
+    &__textarea {
+      height: 150px;
+    } 
+    &__btn {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+    &__form {
+      width: 100%;
+      height: 400px;
+    }
+    &__end {
+      margin-top: 20px;
+      height: 90px;
+      text-align: center;
+      line-height: 28px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    &__body {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
+    &__title {
+      margin-top: 30px;
+      font-size: 25px;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__list {
+      @include flex-conf(center, center);
+    }
+  }
+}
+
+
+@media(min-width: 400px) and (max-width:1300px) {
+  .footer {
+    &__container {
+      width: 400px;
+    }
+  }
+}
+
+@media(min-width:1400px) {
+  .footer {
+    &__container {
+      width: 1200px;
+    }
+  }
+}

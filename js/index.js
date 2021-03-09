@@ -14,7 +14,7 @@ $( document ).ready( function () {
       300: {
         items: 1
       },
-      1000: {
+      1300: {
         items: 2,
         margin: 0,
       }
