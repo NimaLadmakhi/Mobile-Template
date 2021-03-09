@@ -22,3 +22,7 @@ button {
 ul {
   list-style: none;
 }
+
+*:focus {
+  outline: none;
+}
